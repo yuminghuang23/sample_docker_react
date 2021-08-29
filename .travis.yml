@@ -8,7 +8,7 @@ services:
 before_install: 
     - docker build -t yhdango/sample-app -f Dockerfile.dev .
 script:     
-    - docker run -e CI=true yuwangjr/sample-app npm run test -- --coverage --watchAll=false
+    - docker run -e CI=true yhdango/sample-app npm run test -- --coverage --watchAll=false
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1" ### AWS region of your choice
